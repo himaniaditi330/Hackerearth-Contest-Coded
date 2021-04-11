@@ -1,1 +1,1 @@
-# Hackerearth-Contest-Coded
+# Hackerearth-Contest-Codes
