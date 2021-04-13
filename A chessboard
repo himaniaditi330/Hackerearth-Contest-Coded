@@ -1,1 +1,12 @@
 Question : https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/practice-problems/algorithm/chessboard-2-8f06e380/
+
+TC = int(input())
+for _ in range(TC):
+    X1, Y1 = map(int,input().split())
+    X2, Y2 = map(int,input().split())
+    if X1 == X2 and Y1 == Y2:
+        print("SECOND")
+    elif abs(X1 - X2) <= 1 and abs(Y1 - Y2) <= 1:
+        print("FIRST")
+    else:
+        print("DRAW")
