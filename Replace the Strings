@@ -1,0 +1,22 @@
+Question : https://www.hackerearth.com/practice/algorithms/string-algorithm/string-searching/practice-problems/algorithm/make-them-equal-ac0bab4a/
+
+from collections import Counter
+TC = int(input())
+for i in range(TC):
+    LEN = int(input())
+    S = input()
+    T = input()
+    dict1 = Counter(S) 
+    dict2 = Counter(T)
+    dict3 = dict1 | dict2
+    dict4 = dict1 & dict2
+    c=0
+    for i in dict3:
+        if dict4[i]:
+            c += dict3[i] - dict4[i]
+        else:
+            c += dict3[i]
+    if c>2:
+        print("NO")
+    else:
+        print("YES")
