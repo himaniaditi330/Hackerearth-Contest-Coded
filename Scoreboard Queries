@@ -1,2 +1,26 @@
 Question : https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/tournament-and-ranks-67cd4b7e/
+def find_dict(arr): 
+    dict = {}
+    for i in arr:
+        if i in dict:
+            dict[i] += 1
+        else:
+            dict[i] = 1
+        
+    return dict;
 
+T = int(input())
+for t in range(T):
+    N, Q = map(int, input().split())
+    A = list(map(int,input().split()))
+    dictionary = find_dict(A)
+    for i in range(Q):
+        L, R = map(int,input().split())
+        dictionary[A[L - 1]] -= 1
+        if dictionary[A[L - 1]] == 0:  dictionary.pop(A[L - 1])
+        if R not in dictionary.keys():
+            dictionary[R] = 1
+        else:
+            dictionary[R] += 1
+        A[L - 1] = R
+        print(len(dictionary) + 1)
