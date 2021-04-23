@@ -1,0 +1,9 @@
+Question : https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/practice-problems/algorithm/array-deletion-2-aee9dffe/
+
+
+import math
+# Write your code
+T = int(input())
+for _ in range(T):
+    N, K = map(int,input().split())
+    print(math.ceil( N / ((2 * K) + 1)))
